@@ -24,7 +24,7 @@ return (
         <TableRow>
         <TableCell>Id</TableCell>
     <TableCell>Name</TableCell>
-    <TableCell>Grade</TableCell>
+    <TableCell>Class</TableCell>
         </TableRow>
     </TableHead>
     <TableBody>
