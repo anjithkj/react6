@@ -1,0 +1,35 @@
+
+import { Button, TextField, Typography } from '@mui/material'
+import React, { useState } from 'react'
+
+const Addstudents = () => {
+    var[students,setstudents]=useState({
+        id:"",
+        name:"",
+        grade:""
+    })
+        const handleChange =(e)=>{
+            const{ name,value}= e.target
+            setstudents({...students,[name]:value})
+                console.log(students)
+        
+        }
+   const savedata =()=>{
+   console.log("button clicked")
+   }
+  return (
+    <div>
+      <Typography variant='h6'>Add sudents</Typography><br></br>
+
+    <br></br>
+      <TextField label="id" variant='outlined' name='id' value={students.id}onChange={handleChange }/><p></p>
+      <TextField label="name"  variant='outlined' name='name' value={students.name}onChange={handleChange }/><p></p>
+      <TextField label="grade" variant='outlined' name='grade' value={students.grade}onChange={handleChange }/><p></p>
+    
+      <Button variant='contained' onClick={savedata}>Submit</Button>
+      
+    </div>
+  )
+}
+
+export default Addstudents
