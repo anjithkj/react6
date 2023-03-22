@@ -1,5 +1,6 @@
 
 import { Button, TextField, Typography } from '@mui/material'
+import axios from 'axios'
 import React, { useState } from 'react'
 
 const Addstudents = () => {
@@ -16,6 +17,13 @@ const Addstudents = () => {
         }
    const savedata =()=>{
    console.log("button clicked")
+   axios.post("  http://localhost:3006/student",students)
+   .then(responce=>{
+    
+   })
+   .catch(error=>{
+    alert("Faild")
+   })
    }
   return (
     <div>
