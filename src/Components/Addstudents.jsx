@@ -19,7 +19,8 @@ const Addstudents = () => {
    console.log("button clicked")
    axios.post("  http://localhost:3006/student",students)
    .then(responce=>{
-    
+    alert("succesfully added")
+    //in above line is used to inform the user or site the data is added or stored
    })
    .catch(error=>{
     alert("Faild")
