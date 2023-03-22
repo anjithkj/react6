@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
+import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material'
 import axios from 'axios'
 import React, { useEffect, useState, } from 'react'
 
@@ -13,6 +13,14 @@ useEffect(()=>{
     })
     .catch(err=>console.log(err))
 })
+const deletestudent=(id)=>{
+    console.log("delete clicked"+id);
+    axios.delete("http://localhost:3005/student/"+id)
+    .then(response=>{
+        alert("deleted")
+        window.location.reload(false)
+    })
+}
 
 
 
@@ -26,6 +34,8 @@ useEffect(()=>{
         <TableCell>Id</TableCell>
     <TableCell>Name</TableCell>
     <TableCell>Grade</TableCell>
+    <TableCell>DELETE</TableCell>
+    <TableCell>Update</TableCell>
         </TableRow>
     </TableHead>
     <TableBody>
@@ -34,6 +44,8 @@ useEffect(()=>{
                 <TableCell>{value.id}</TableCell>
             <TableCell>{value.name}</TableCell>
             <TableCell>{value.grade}</TableCell>
+            <TableCell><Button onClick={()=>deletestudent(value.id)}>DELETE</Button></TableCell>
+            
             </TableRow>
         })}
         
