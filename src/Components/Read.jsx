@@ -35,7 +35,9 @@ const deletestudent=(id)=>{
     <TableCell>Name</TableCell>
     <TableCell>Grade</TableCell>
     <TableCell>DELETE</TableCell>
-    <TableCell>Update</TableCell>
+    <TableCell>Update
+
+    </TableCell>
         </TableRow>
     </TableHead>
     <TableBody>
